@@ -177,8 +177,8 @@
 :root {
   --_font---rbno-31: "Rbno 31", Impact, sans-serif;
   --_font---proxima-nova: "Proxima Nova", Arial, sans-serif;
-  --_font---hyperx-white: white;
   --_font---color: #000;
+  --_font---hyperx-white: white;
   --_font---font-family: "Rbno 31 Book", Impact, sans-serif;
   --_font---font-family-3: "Rbno 31 31", Arial, sans-serif;
   --_font---hyperx-red: #c8202f;
@@ -262,6 +262,10 @@
 }
 
 .wildgatesection2 {
+  background-color: var(--_font---color);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
 }
 
@@ -283,7 +287,10 @@
 
 .grid {
   grid-template-rows: auto;
+  width: 100%;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .heading {
@@ -296,6 +303,21 @@
   color: var(--_font---hyperx-white);
   font-size: 120%;
   line-height: 150%;
+}
+
+.image {
+  background-color: var(--_font---color);
+  object-fit: cover;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.herotop {
+  object-fit: cover;
 }
 
 @media screen and (max-width: 767px) {
