@@ -255,7 +255,11 @@
   line-height: 130%;
 }
 
-.div-block {
+.wildgatetop {
+  object-fit: cover;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -290,7 +294,7 @@
 
 .grid {
   grid-template-rows: auto;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -325,7 +329,9 @@
 .herotop {
   background-color: var(--_font---color);
   object-fit: cover;
-  position: relative;
+  width: 100%;
+  min-width: 100%;
+  position: static;
 }
 
 .wildgate2 {
