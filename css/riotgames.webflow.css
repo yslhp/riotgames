@@ -270,13 +270,17 @@
   object-fit: cover;
   width: 100%;
   min-width: 100%;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   position: relative;
 }
 
 .section2text {
-  position: absolute;
+  justify-content: flex-start;
+  align-items: flex-end;
+  display: flex;
+  position: relative;
   inset: 0%;
 }
 
@@ -295,9 +299,11 @@
 .grid {
   grid-template-rows: auto;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
+  min-height: 100%;
+  margin-top: 0%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -306,6 +312,8 @@
 .heading {
   font-family: var(--_font---rbno-31);
   color: var(--_font---hyperx-white);
+  font-size: 400%;
+  line-height: 105%;
 }
 
 .text-block-2 {
@@ -317,6 +325,7 @@
 
 .coverimage {
   background-color: var(--_font---color);
+  vertical-align: middle;
   object-fit: cover;
   width: 100%;
   min-width: 100%;
@@ -324,6 +333,8 @@
   min-height: 100%;
   margin-left: auto;
   margin-right: auto;
+  display: block;
+  position: relative;
 }
 
 .herotop {
@@ -341,11 +352,51 @@
   height: 50%;
 }
 
+.imageabsolutewrapper {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.imagewrapback {
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+}
+
+.texttopabsolute {
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  height: 500px;
+  display: block;
+  position: absolute;
+  inset: 0%;
+}
+
+.wildgategrid {
+  grid-template-rows: auto;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  height: 500px;
+  min-height: 100%;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
 @media screen and (max-width: 991px) {
   .section2text {
     aspect-ratio: auto;
     width: 100%;
     min-width: 100%;
+  }
+
+  .heading {
+    font-size: 300%;
   }
 }
 
@@ -360,10 +411,14 @@
     max-width: 90%;
   }
 
+  .wildgatesection2 {
+    height: 370px;
+  }
+
   .section2text {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50%;
+    padding-top: 400px;
   }
 
   .wildgatecopywrapper {
@@ -371,6 +426,7 @@
     align-items: center;
     width: 100%;
     max-width: 100%;
+    margin-top: 0;
     display: block;
   }
 
@@ -387,11 +443,30 @@
   .body {
     background-color: var(--_font---color);
   }
+
+  .coverimage, .imageabsolutewrapper, .imagewrapback, .texttopabsolute {
+    height: 370px;
+  }
+
+  .wildgategrid {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    height: auto;
+    margin-bottom: auto;
+    display: grid;
+  }
 }
 
 @media screen and (max-width: 479px) {
   .riotheadingmain {
     font-size: 270%;
+  }
+
+  .wildgatesection2 {
+    height: 200px;
   }
 
   .section2text {
@@ -400,6 +475,7 @@
     min-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 200px;
   }
 
   .wildgatecopywrapper {
@@ -409,6 +485,19 @@
   }
 
   .grid {
+    display: block;
+  }
+
+  .heading {
+    font-size: 200%;
+    line-height: 101%;
+  }
+
+  .coverimage, .imageabsolutewrapper, .imagewrapback, .texttopabsolute {
+    height: 200px;
+  }
+
+  .wildgategrid {
     display: block;
   }
 }
